@@ -1,0 +1,55 @@
+
+<!--
+<h1 class="container bg-dark text-white text-center my-4 py-4" >[ngClass]</h1>
+<div class="container">
+  <button class="btn btn-dark mb-3" (click)="fondo='Primero'">Primero</button>
+  <button class="btn btn-danger mb-3" (click)="fondo='Segundo'">Segundo</button>
+  <p class="text-info d-none" [ngClass]="{'d-block':fondo=='Primero'}" >
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam corrupti, illum dolorum ducimus cum iure praesentium consectetur ab temporibus maiores suscipit, quas recusandae iste dignissimos in minima necessitatibus reprehenderit totam.</p>
+  
+  <p class="text-danger d-none" [ngClass]="{'d-block':fondo=='Segundo'}" >
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi consequuntur debitis eaque a vero, quis quos quasi perferendis obcaecati saepe rem incidunt sint cumque exercitationem sequi aliquid natus quia laudantium.</p>
+  
+        
+  
+</div>
+<h1 class="container bg-dark text-white text-center my-4 py-4">[ngFor]</h1>
+<div class="container">
+  <ul>
+    <li *ngFor="let curso of cursos">{{curso}}</li>
+  </ul>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">TIPO</th>
+        <th scope="col">NOMBRE</th>
+        <th scope="col">EDAD</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let animal of animales; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{animal.tipo}}</td>
+        <td>{{animal.nombre}}</td>
+        <td>{{animal.edad}}</td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>
+-->
+<app-encabezado></app-encabezado>
+<div class=" container py-5">
+    <router-outlet></router-outlet>
+    <button type="submit" class="btn btn-primary" routerLink="/contacto">Login</button>
+    <button type="submit" class="btn btn-primary" routerLink="/cuerpo">Register</button>
+    
+    
+</div>
+<div class="text-center py-5">
+    <img src="assets/img/salesiana.png">
+  </div>
+<app-footer></app-footer>
+
+

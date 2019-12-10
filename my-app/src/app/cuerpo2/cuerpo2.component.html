@@ -1,0 +1,15 @@
+<div  >
+        <button type="submit" class="btn btn-primary" routerLink="/contacto" style="float:right" >Log Out</button>
+</div>
+<div class=" container py-5">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of mecanica, index as i">
+            <h6>Sensor: {{item.sensor}}</h6>
+            <h6>Especialida: {{item.especialidad}}</h6>
+            <a [routerLink]="['/sensores',i]">Leer mas...</a>
+        </li>
+    </ul>
+    <router-outlet></router-outlet>
+    
+</div>
+
